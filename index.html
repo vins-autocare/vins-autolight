@@ -20,6 +20,151 @@
         <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Slow But Sure</p>
     </header>
 
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foto Slide Cantik</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+  .slider {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    background: #000;
+  }
+
+  .slide {
+    display: none;
+    width: 100%;
+    animation: fade 1s;
+  }
+
+  .slide img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
+
+  @keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+  }
+
+  /* Tombol navigasi */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  /* Dot indikator */
+  .dots {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .active-dot {
+    background-color: white;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slide"><img src="foto1.jpg" alt="Foto 1"></div>
+  <div class="slide"><img src="foto2.jpg" alt="Foto 2"></div>
+  <div class="slide"><img src="foto3.jpg" alt="Foto 3"></div>
+
+  <span class="prev">&#10094;</span>
+  <span class="next">&#10095;</span>
+
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+</div>
+
+<script>
+let slideIndex = 0;
+let slides = document.getElementsByClassName("slide");
+let dots = document.getElementsByClassName("dot");
+
+function showSlide(n) {
+  if(n >= slides.length) slideIndex = 0;
+  else if(n < 0) slideIndex = slides.length - 1;
+  else slideIndex = n;
+
+  // sembunyikan semua slide
+  for(let i=0; i<slides.length; i++){
+    slides[i].style.display = "none";
+  }
+
+  // nonaktifkan semua dot
+  for(let i=0; i<dots.length; i++){
+    dots[i].classList.remove("active-dot");
+  }
+
+  // tampilkan slide dan aktifkan dot
+  slides[slideIndex].style.display = "block";
+  dots[slideIndex].classList.add("active-dot");
+}
+
+// navigasi tombol
+document.querySelector(".prev").addEventListener("click", () => {
+  showSlide(slideIndex - 1);
+});
+document.querySelector(".next").addEventListener("click", () => {
+  showSlide(slideIndex + 1);
+});
+
+// klik dot
+function currentSlide(n) {
+  showSlide(n);
+}
+
+// auto slide setiap 4 detik
+setInterval(() => {
+  showSlide(slideIndex + 1);
+}, 4000);
+
+// tampilkan slide pertama saat halaman dimuat
+showSlide(slideIndex);
+</script>
+
+</body>
+</html>
+
+
 
 
     <nav>
