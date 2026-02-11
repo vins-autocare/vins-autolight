@@ -128,6 +128,51 @@ button:hover{
   height: auto;   /* biar tidak gepeng */
 }
 
+#layanan {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#layanan h2 {
+  margin-bottom: 30px;
+}
+
+.layanan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.layanan-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.layanan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.18);
+}
+
+.layanan-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.layanan-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.layanan-desc {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
+
 
 
 
