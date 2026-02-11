@@ -1,60 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vins Autolight</title>
-    <link rel="stylesheet" href="beranda.css">
-    <link rel="icon" href="vins_logo-removebg-preview.png">
-    <link rel="apple-touch-icon" href="vins_logo-removebg-preview.png">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bengkel Mobil Profesional</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    
-    <header class="lampu-header">
+<body class="bg-gray-100 text-gray-800">
 
-        <h1>Vins Autolight</h1>
-        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Slow But Sure</p>
-    </header>
+<!-- NAVBAR -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-700">🔧 Bengkel Mobil</h1>
+    <div class="space-x-6 hidden md:block">
+      <a href="#home" class="hover:text-blue-600">Beranda</a>
+      <a href="#layanan" class="hover:text-blue-600">Layanan</a>
+      <a href="#harga" class="hover:text-blue-600">Harga</a>
+      <a href="#testimoni" class="hover:text-blue-600">Testimoni</a>
+      <a href="#kontak" class="hover:text-blue-600">Kontak</a>
+    </div>
+  </div>
+</nav>
 
+<!-- HERO -->
+<section id="home" class="pt-24 bg-cover bg-center"
+style="background-image:url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e');">
+  <div class="bg-black/60">
+    <div class="max-w-6xl mx-auto px-4 py-24 text-white">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Servis Cepat,<br>Harga Tepat
+      </h2>
+      <p class="mb-6">Layanan bengkel profesional & terpercaya</p>
+      <button class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded shadow-lg">
+        Booking Sekarang
+      </button>
+    </div>
+  </div>
+</section>
 
-    <nav>
-        <a href="galery.html">Galeri</a>
-        <a href="socialmedia.html">Sosial Media</a>
-    </nav>
+<!-- LAYANAN -->
+<section id="layanan" class="max-w-6xl mx-auto px-4 py-16">
+  <h3 class="text-3xl font-bold text-center mb-10">Layanan Kami</h3>
+  
+  <div class="grid md:grid-cols-4 gap-6">
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl text-center">
+      🛢️
+      <h4 class="font-bold mt-3">Ganti Oli</h4>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl text-center">
+      ⚙️
+      <h4 class="font-bold mt-3">Tune Up</h4>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl text-center">
+      ❄️
+      <h4 class="font-bold mt-3">Service AC</h4>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl text-center">
+      🚗
+      <h4 class="font-bold mt-3">Body Repair</h4>
+    </div>
+  </div>
+</section>
 
+<!-- HARGA -->
+<section id="harga" class="bg-gray-200 py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-bold text-center mb-10">Paket & Harga</h3>
+
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl shadow p-6 text-center">
+        <h4 class="font-bold">Servis Rutin</h4>
+        <p class="text-2xl font-bold text-blue-700 mt-3">Rp500.000</p>
+      </div>
+
+      <div class="bg-orange-500 text-white rounded-xl shadow p-6 text-center">
+        <h4 class="font-bold">Oli + Tune Up</h4>
+        <p class="text-2xl font-bold mt-3">Rp350.000</p>
+      </div>
+
+      <div class="bg-red-500 text-white rounded-xl shadow p-6 text-center">
+        <h4 class="font-bold">Service AC</h4>
+        <p class="text-2xl font-bold mt-3">Rp350.000</p>
+      </div>
+
+      <div class="bg-blue-700 text-white rounded-xl shadow p-6 text-center">
+        <h4 class="font-bold">Body Repair</h4>
+        <p class="text-2xl font-bold mt-3">Rp300.000</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h3 class="text-3xl font-bold text-center mb-10">Galeri Bengkel</h3>
+
+  <div class="grid md:grid-cols-4 gap-4">
+    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc" class="rounded-lg shadow">
+    <img src="https://images.unsplash.com/photo-1515923162033-7b7d7f1b59e4" class="rounded-lg shadow">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" class="rounded-lg shadow">
+    <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def" class="rounded-lg shadow">
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section id="testimoni" class="bg-gray-200 py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-bold text-center mb-10">Testimoni Pelanggan</h3>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow">
+        ⭐⭐⭐⭐⭐
+        <p class="mt-3">Pelayanan cepat dan memuaskan. Mobil kembali prima!</p>
+        <p class="font-bold mt-2">— Andi P.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        ⭐⭐⭐⭐⭐
+        <p class="mt-3">Body repair sangat rapi. Recommended!</p>
+        <p class="font-bold mt-2">— Rina S.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="max-w-6xl mx-auto px-4 py-16">
+  <h3 class="text-3xl font-bold text-center mb-10">Kontak Kami</h3>
+
+  <div class="grid md:grid-cols-2 gap-10">
     <div>
-      <section id="layanan" class="bg">
-        <h2>Layanan Kami</h2>
-        <ul>
-            <li><button onclick="klikBtn(this)" data-link="serviskabelbody.html">
-                    Servis Kabel Body</button></li>
-
-            <li><button onclick="klikBtn(this)" data-link="servisbiled.html">
-                    Servis Biled</button></li>
-
-            <li><button onclick="klikBtn(this)" data-link="customlazy.html">
-                    Custom lazy</button></li>
-
-           <li><button onclick="klikBtn(this)" data-link="custom biled.html">
-                    Custom Biled</button></li>
-        </ul>
-    </section>
+      <p>📍 Jl. Raya No.123</p>
+      <p>📞 0812-4456-7890</p>
+      <p>✉️ info@bengkelmobil.com</p>
+      <p>🕒 Senin - Sabtu (08.00 - 17.00)</p>
     </div>
 
-   <section id="kontak">
-        <h>Kontak</h2>
-        <p>📍 Alamat: Jl. Raya No. 123</p>
-        <p>📞 Telp: 0822-3396-1575</p>
-    </section>
+    <div>
+      <iframe class="w-full h-64 rounded-lg shadow"
+        src="https://maps.google.com/maps?q=jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
 
-
-       <footer>
-        <p>&copy;2026 Vins Autolight</p>
-    </footer>
-
-
+<!-- FOOTER -->
+<footer class="bg-blue-900 text-white text-center py-6">
+  © 2026 Bengkel Mobil Profesional
+</footer>
 
 </body>
 </html>
