@@ -1,58 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Menu Social Media</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-<!-- Font Awesome Icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    text-align: center;
+  <style>
+    .floating-social {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
 }
 
-.social-menu {
-    margin-top: 50px;
-}
-
-.social-menu a {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 20px;
+.floating-social a {
+    display: block;
+    margin: 5px;
+    padding: 12px;
     color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
 }
 
-.social-menu a:hover {
-    opacity: 0.8;
-}
-
-/* Warna masing-masing social media */
-.facebook { background: #1877F2; }
-.instagram { background: #E4405F; }
-.tiktok { background: #000000; }
-.youtube { background: #FF0000; }
-.whatsapp { background: #25D366; }
-
-</style>
+  </style>
 </head>
-<body>
-
-<h2>Follow Kami di Social Media</h2>
-
-<div class="social-menu">
-    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a href="#" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="#" class="tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
-    <a href="#" class="youtube"><i class="fab fa-youtube"></i> YouTube</a>
-    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<div class="floating-social">
+    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 </div>
 
+<body>
+  
 </body>
 </html>
