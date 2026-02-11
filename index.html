@@ -11,6 +11,23 @@
 <link rel="apple-touch-icon" href="vins_logo-removebg-preview.png">
 
 </head>
+<script>
+    const images =[
+        "foto1",
+        "foto2",
+        "foto3",
+        "foto4"
+    ];
+
+let index =0;
+
+setInterval (()) {
+    index=(index+1) % images.length;
+    document.getElementById("slide").src=images[index];
+} 3000;//ganti tiap 3 detik
+</script>
+
+
 
 <body>
 
@@ -19,6 +36,14 @@
     <h1>Vins Autolight</h1>
     <p class="tagline">Slow But Sure</p>
 </header>
+
+<!--slideshow-->
+<div class="slider">
+    <img id="slide" src="vins_logo-removebg-preview.png">
+    <img id="slide" src="nmax old otong.jpeg">
+    <img id="slide" src="nmaxnewbiled.jpeg">
+    <img id="slide" src="led new mang wily,ngurah.jpeg">
+</div>
 
 <!-- NAV -->
 <nav>
