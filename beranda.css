@@ -1,178 +1,161 @@
+/* =====================
+   BASE
+===================== */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #8c8c8c;
-    color: #000000;
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #8c8c8c;
+  color: #000;
 }
 
-/* Header */
+/* =====================
+   HEADER
+===================== */
 header {
-    background-color:#0b1020;
-    color: #ffffff;
-    text-shadow: #1500cd;
-    padding: 30px;
-    text-align: center;
+  background: #0b1020;
+  color: white;
+  text-align: center;
+  padding: 30px;
 }
 
 header h1 {
-  color: #ffffff;
+  margin: 0;
   text-shadow:
     0 0 5px #2f00ff,
     0 0 15px #00e5ff,
     0 0 30px #4d2dff;
 }
 
-
-/* Navigation */
+/* =====================
+   NAVIGATION
+===================== */
 nav {
-    background-color: #333;
-    text-align: center;
-    padding: 10px;
+  background: #333;
+  text-align: center;
+  padding: 12px;
 }
 
 nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .2s;
 }
 
 nav a:hover {
-    color: #1e90ff;
+  color: #1e90ff;
 }
 
-/* Section */
+/* =====================
+   SECTION
+===================== */
 section {
-    padding: 40px;
-    text-align: center;
-
-}
-
-.bg {
-    background-color: #050505;
-}
-
-/* List layanan */
-ul {
-    list-style: none;
-    padding: 0;
-    text-shadow: #000000;
-}
-
-ul li {
-    background: #1900ff;
-    color: rgb(255, 255, 255);
-    margin: 10px auto;
-    padding: 10px;
-    width: 200px;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-div{
-    color: rgb(255, 255, 255);
-    background-color: #000000;
-}
-
-
-
-button {
-    position: relative;
-    overflow: hidden;
-}
-
-button span {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    transform: scale(0);
-    animation: ripple 0.6s linear;
-}
-
-@keyframes ripple {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-button {
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-    box-shadow: 0 5px 0 #0b63c7;
-}
-
-button:active {
-    transform: translateY(4px);
-    box-shadow: 0 1px 0 #0b63c7;
-}
-button:hover{
-      box-shadow: 0 0 15px #000000;
-}
-
-
-@keyframes floating {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.logo {
-  width: 200px;   /* kecilkan di sini */
-  height: auto;   /* biar tidak gepeng */
-}
-
-#layanan {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
+/* =====================
+   LAYANAN GRID
+===================== */
+#layanan {
+  background: #f3f4f6;
+}
+
 #layanan h2 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .layanan-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 24px;
 }
 
+/* CARD */
 .layanan-card {
   background: white;
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .layanan-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.18);
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
 }
 
 .layanan-icon {
-  font-size: 40px;
-  margin-bottom: 12px;
+  font-size: 42px;
+  margin-bottom: 14px;
 }
 
 .layanan-title {
   font-weight: bold;
   font-size: 18px;
+  margin-bottom: 6px;
 }
 
 .layanan-desc {
   font-size: 14px;
   color: #666;
-  margin-top: 8px;
 }
 
+/* =====================
+   BUTTON (GLOBAL)
+===================== */
+button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: .2s;
+  box-shadow: 0 4px 0 #1e40af;
+}
 
+button:hover {
+  background: #1d4ed8;
+}
 
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #1e40af;
+}
 
+/* =====================
+   KONTAK
+===================== */
+#kontak {
+  background: white;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* =====================
+   LOGO
+===================== */
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+/* =====================
+   ANIMATION (optional)
+===================== */
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}

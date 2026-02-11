@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vins Autolight</title>
-    <link rel="stylesheet" href="beranda.css">
-    <link rel="icon" href="vins_logo-removebg-preview.png">
-    <link rel="apple-touch-icon" href="vins_logo-removebg-preview.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vins Autolight</title>
+
+<link rel="stylesheet" href="beranda.css">
+<link rel="icon" href="vins_logo-removebg-preview.png">
+<link rel="apple-touch-icon" href="vins_logo-removebg-preview.png">
 
 </head>
 
 <body>
-    
-    <header class="lampu-header">
 
-        <h1>Vins Autolight</h1>
-        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Slow But Sure</p>
-    </header>
+<!-- HEADER -->
+<header class="lampu-header">
+    <h1>Vins Autolight</h1>
+    <p class="tagline">Slow But Sure</p>
+</header>
 
+<!-- NAV -->
+<nav>
+    <a href="galery.html">Galeri</a>
+    <a href="socialmedia.html">Sosial Media</a>
+</nav>
 
-    <nav>
-        <a href="galery.html">Galeri</a>
-        <a href="socialmedia.html">Sosial Media</a>
-    </nav>
+<!-- LAYANAN -->
 <section id="layanan">
   <h2>Layanan Kami</h2>
 
@@ -46,7 +50,8 @@
       <div class="layanan-desc">Modifikasi sesuai kebutuhan</div>
     </div>
 
-    <div class="layanan-card" onclick="klikBtn(this)" data-link="custom biled.html">
+    <!-- ⚠️ nama file tanpa spasi -->
+    <div class="layanan-card" onclick="klikBtn(this)" data-link="custombiled.html">
       <div class="layanan-icon">🚗</div>
       <div class="layanan-title">Custom Biled</div>
       <div class="layanan-desc">Upgrade tampilan & performa lampu</div>
@@ -55,49 +60,24 @@
   </div>
 </section>
 
+<!-- KONTAK -->
+<section id="kontak" class="section">
+    <h2>Kontak</h2>
+    <p>📍 Alamat: Jl. Raya No. 123</p>
+    <p>📞 Telp: 0822-3396-1575</p>
+</section>
 
-   <section id="kontak"class"section">
-        <h>Kontak</h2>
-        <p>📍 Alamat: Jl. Raya No. 123</p>
-        <p>📞 Telp: 0822-3396-1575</p>
-    </section>
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Vins Autolight</p>
+</footer>
 
-
-       <footer>
-        <p>&copy;2026 Vins Autolight</p>
-    </footer>
-
-
-    <script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("show");
+<!-- SCRIPT -->
+<script>
+function klikBtn(el){
+  window.location.href = el.dataset.link;
 }
-
-/* SLIDER */
-const images = [
- "https://images.unsplash.com/photo-1558981806-ec527fa84c39",
- "https://images.unsplash.com/photo-1609630875171-b1321377ee65",
- "https://images.unsplash.com/photo-1592853625601-bb9d23da12d8"
-];
-let i=0;
-setInterval(()=>{
-  i=(i+1)%images.length;
-  document.getElementById("slide").src=images[i];
-},3000);
-
-/* REVEAL ANIMATION */
-function reveal(){
-  document.querySelectorAll(".reveal").forEach(el=>{
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight-80){
-      el.classList.add("active");
-    }
-  });
-}
-window.addEventListener("scroll", reveal);
-reveal();
 </script>
-
 
 </body>
 </html>
