@@ -1,154 +1,333 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+
+body{background:#f4f6f8;color:#333}
+
+/* NAV */
+header{
+ background:#fff;
+ box-shadow:0 2px 10px rgba(0,0,0,.1);
+ position:sticky;top:0;z-index:100;
+}
+
+.container{width:92%;max-width:1100px;margin:auto}
+
+.nav{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:15px 0;
+}
+
+.logo{font-weight:bold;font-size:20px;color:#d62828}
+
+nav a{
+ margin-left:18px;
+ text-decoration:none;
+ color:#333;
+ font-weight:600;
+}
+
+nav a:hover{color:#d62828}
+
+.menu-btn{
+ display:none;
+ font-size:22px;
+ background:none;
+ border:none;
+}
+
+/* HERO */
+.hero{
+ background:url("https://images.unsplash.com/photo-1549921296-3a6b4a8a4f4a") center/cover;
+ height:420px;
+ display:flex;
+ align-items:center;
+}
+
+.hero-content{
+ background:rgba(0,0,0,.6);
+ color:#fff;
+ padding:40px;
+ border-radius:14px;
+ box-shadow:0 15px 40px rgba(0,0,0,.4);
+ animation:fadeUp 1s ease;
+}
+
+.hero h1{font-size:40px}
+.hero button{
+ margin-top:15px;
+ padding:12px 22px;
+ border:none;
+ background:#d62828;
+ color:white;
+ border-radius:8px;
+ cursor:pointer;
+ box-shadow:0 6px 18px rgba(0,0,0,.3);
+}
+
+/* SECTION */
+.section{padding:70px 5%;text-align:center}
+.gray{background:#e9edf2}
+.section h2{margin-bottom:40px;font-size:28px}
+
+/* GRID */
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:25px;
+}
+
+/* CARD */
+.card,.price-card,.testi{
+ background:#fff;
+ padding:25px;
+ border-radius:14px;
+ box-shadow:0 8px 22px rgba(0,0,0,.12);
+ transition:.35s;
+}
+
+.card:hover,.price-card:hover,.testi:hover{
+ transform:translateY(-8px) scale(1.02);
+}
+
+/* PRICE */
+.price{font-size:26px;font-weight:bold;color:#d62828}
+.highlight{background:#d62828;color:white}
+.highlight .price{color:white}
+
+/* SLIDER */
+.slider{
+ max-width:800px;
+ margin:auto;
+ border-radius:14px;
+ overflow:hidden;
+ box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+.slider img{
+ width:100%;
+ height:420px;
+ object-fit:cover;
+}
+
+/* REVEAL */
+.reveal{
+ opacity:0;
+ transform:translateY(40px);
+ transition:.8s;
+}
+.reveal.active{
+ opacity:1;
+ transform:none;
+}
+
+/* FOOTER */
+footer{
+ background:#111;
+ color:white;
+ text-align:center;
+ padding:25px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+ nav{
+  position:absolute;
+  background:white;
+  width:100%;
+  left:0;
+  top:60px;
+  display:none;
+  flex-direction:column;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+ }
+ nav a{padding:15px}
+ .menu-btn{display:block}
+ nav.show{display:flex}
+ .hero h1{font-size:28px}
+}
+
+
+    </style>
+</head>
+
+<body>
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bengkel Mobil Profesional</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>Bengkel Motor Pro</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body>
 
-<!-- NAVBAR -->
-<nav class="bg-white shadow-md fixed w-full z-50">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-blue-700">🔧 Bengkel Mobil</h1>
-    <div class="space-x-6 hidden md:block">
-      <a href="#home" class="hover:text-blue-600">Beranda</a>
-      <a href="#layanan" class="hover:text-blue-600">Layanan</a>
-      <a href="#harga" class="hover:text-blue-600">Harga</a>
-      <a href="#testimoni" class="hover:text-blue-600">Testimoni</a>
-      <a href="#kontak" class="hover:text-blue-600">Kontak</a>
-    </div>
+<header>
+  <div class="container nav">
+    <div class="logo">🏍️ BengkelMotorPro</div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="menu">
+      <a href="#home">Beranda</a>
+      <a href="#slider">Galeri</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#harga">Harga</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
   </div>
-</nav>
+</header>
 
 <!-- HERO -->
-<section id="home" class="pt-24 bg-cover bg-center"
-style="background-image:url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e');">
-  <div class="bg-black/60">
-    <div class="max-w-6xl mx-auto px-4 py-24 text-white">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        Servis Cepat,<br>Harga Tepat
-      </h2>
-      <p class="mb-6">Layanan bengkel profesional & terpercaya</p>
-      <button class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded shadow-lg">
-        Booking Sekarang
-      </button>
-    </div>
+<section id="home" class="hero">
+  <div class="hero-content reveal">
+    <h1>Servis Motor Cepat & Presisi</h1>
+    <p>Spesialis motor harian & racing</p>
+    <button>Hubungi Sekarang</button>
+  </div>
+</section>
+
+<!-- SLIDER -->
+<section id="slider" class="section">
+  <h2>Galeri Bengkel</h2>
+  <div class="slider">
+    <img id="slide" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39">
   </div>
 </section>
 
 <!-- LAYANAN -->
-<section id="layanan" class="max-w-6xl mx-auto px-4 py-16">
-  <h3 class="text-3xl font-bold text-center mb-10">Layanan Kami</h3>
-  
-  <div class="grid md:grid-cols-4 gap-6">
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl text-center">
-      🛢️
-      <h4 class="font-bold mt-3">Ganti Oli</h4>
+<section id="layanan" class="section gray">
+  <h2>Layanan Motor</h2>
+  <div class="grid">
+
+    <div class="card reveal">
+      <div class="icon">🛢️</div>
+      <h3>Ganti Oli</h3>
+      <p>Oli mesin & gardan</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl text-center">
-      ⚙️
-      <h4 class="font-bold mt-3">Tune Up</h4>
+
+    <div class="card reveal">
+      <div class="icon">⚙️</div>
+      <h3>Tune Up</h3>
+      <p>Setting mesin optimal</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl text-center">
-      ❄️
-      <h4 class="font-bold mt-3">Service AC</h4>
+
+    <div class="card reveal">
+      <div class="icon">🔋</div>
+      <h3>Kelistrikan</h3>
+      <p>Aki & sistem lampu</p>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl text-center">
-      🚗
-      <h4 class="font-bold mt-3">Body Repair</h4>
+
+    <div class="card reveal">
+      <div class="icon">🏁</div>
+      <h3>Modifikasi</h3>
+      <p>Upgrade performa</p>
     </div>
+
   </div>
 </section>
 
 <!-- HARGA -->
-<section id="harga" class="bg-gray-200 py-16">
-  <div class="max-w-6xl mx-auto px-4">
-    <h3 class="text-3xl font-bold text-center mb-10">Paket & Harga</h3>
+<section id="harga" class="section">
+  <h2>Paket Servis</h2>
+  <div class="grid">
 
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="bg-white rounded-xl shadow p-6 text-center">
-        <h4 class="font-bold">Servis Rutin</h4>
-        <p class="text-2xl font-bold text-blue-700 mt-3">Rp500.000</p>
-      </div>
-
-      <div class="bg-orange-500 text-white rounded-xl shadow p-6 text-center">
-        <h4 class="font-bold">Oli + Tune Up</h4>
-        <p class="text-2xl font-bold mt-3">Rp350.000</p>
-      </div>
-
-      <div class="bg-red-500 text-white rounded-xl shadow p-6 text-center">
-        <h4 class="font-bold">Service AC</h4>
-        <p class="text-2xl font-bold mt-3">Rp350.000</p>
-      </div>
-
-      <div class="bg-blue-700 text-white rounded-xl shadow p-6 text-center">
-        <h4 class="font-bold">Body Repair</h4>
-        <p class="text-2xl font-bold mt-3">Rp300.000</p>
-      </div>
+    <div class="price-card reveal">
+      <h3>Servis Ringan</h3>
+      <div class="price">Rp120k</div>
     </div>
-  </div>
-</section>
 
-<!-- GALERI -->
-<section class="max-w-6xl mx-auto px-4 py-16">
-  <h3 class="text-3xl font-bold text-center mb-10">Galeri Bengkel</h3>
+    <div class="price-card highlight reveal">
+      <h3>Servis Lengkap</h3>
+      <div class="price">Rp250k</div>
+    </div>
 
-  <div class="grid md:grid-cols-4 gap-4">
-    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc" class="rounded-lg shadow">
-    <img src="https://images.unsplash.com/photo-1515923162033-7b7d7f1b59e4" class="rounded-lg shadow">
-    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" class="rounded-lg shadow">
-    <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def" class="rounded-lg shadow">
+    <div class="price-card reveal">
+      <h3>Tune Up Racing</h3>
+      <div class="price">Rp350k</div>
+    </div>
+
   </div>
 </section>
 
 <!-- TESTIMONI -->
-<section id="testimoni" class="bg-gray-200 py-16">
-  <div class="max-w-6xl mx-auto px-4">
-    <h3 class="text-3xl font-bold text-center mb-10">Testimoni Pelanggan</h3>
+<section id="testimoni" class="section gray">
+  <h2>Testimoni</h2>
+  <div class="grid">
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-6 rounded-xl shadow">
-        ⭐⭐⭐⭐⭐
-        <p class="mt-3">Pelayanan cepat dan memuaskan. Mobil kembali prima!</p>
-        <p class="font-bold mt-2">— Andi P.</p>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow">
-        ⭐⭐⭐⭐⭐
-        <p class="mt-3">Body repair sangat rapi. Recommended!</p>
-        <p class="font-bold mt-2">— Rina S.</p>
-      </div>
+    <div class="testi reveal">
+      ⭐⭐⭐⭐⭐
+      <p>Motor enak banget setelah servis!</p>
+      <b>— Dika</b>
     </div>
+
+    <div class="testi reveal">
+      ⭐⭐⭐⭐⭐
+      <p>Mekaniknya detail & ramah.</p>
+      <b>— Bayu</b>
+    </div>
+
   </div>
 </section>
 
 <!-- KONTAK -->
-<section id="kontak" class="max-w-6xl mx-auto px-4 py-16">
-  <h3 class="text-3xl font-bold text-center mb-10">Kontak Kami</h3>
-
-  <div class="grid md:grid-cols-2 gap-10">
-    <div>
-      <p>📍 Jl. Raya No.123</p>
-      <p>📞 0812-4456-7890</p>
-      <p>✉️ info@bengkelmobil.com</p>
-      <p>🕒 Senin - Sabtu (08.00 - 17.00)</p>
-    </div>
-
-    <div>
-      <iframe class="w-full h-64 rounded-lg shadow"
-        src="https://maps.google.com/maps?q=jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed">
-      </iframe>
-    </div>
+<section id="kontak" class="section">
+  <h2>Kontak</h2>
+  <div class="contact reveal">
+    📍 Jl. Raya Motor No.88<br>
+    📞 0812-0000-2222<br>
+    🕒 08:00 – 18:00
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-blue-900 text-white text-center py-6">
-  © 2026 Bengkel Mobil Profesional
+<footer>
+  © 2026 BengkelMotorPro
 </footer>
 
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+
+/* SLIDER */
+const images = [
+ "https://images.unsplash.com/photo-1558981806-ec527fa84c39",
+ "https://images.unsplash.com/photo-1609630875171-b1321377ee65",
+ "https://images.unsplash.com/photo-1592853625601-bb9d23da12d8"
+];
+let i=0;
+setInterval(()=>{
+  i=(i+1)%images.length;
+  document.getElementById("slide").src=images[i];
+},3000);
+
+/* REVEAL ANIMATION */
+function reveal(){
+  document.querySelectorAll(".reveal").forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight-80){
+      el.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", reveal);
+reveal();
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
+    
 </body>
 </html>
